@@ -3,7 +3,7 @@ Upstream-Name: truecrack
 Source: https://github.com/lvaccaro/truecrack
 
 Files: *
-Copyright: Luca Vaccaro 
+Copyright: 2011 Luca Vaccaro
 License: GPL-3+
  This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -23,6 +23,7 @@ License: GPL-3+
 
 Files: debian/*
 Copyright: 2012 Devon Kearns <dookie@kali.org>
+           2018 Sophie Brun <sophie@offensive-security.com>
 License: GPL-2+
  This package is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
