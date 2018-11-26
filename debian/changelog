@@ -1,3 +1,9 @@
+truecrack (3.6+git20150326-0kali1) kali-dev; urgency=medium
+
+  * Import upstream release
+
+ -- Sophie Brun <sophie@freexian.com>  Mon, 26 Nov 2018 15:23:40 +0100
+
 truecrack (3.0-1kali0) kali; urgency=low
 
   * Upstream Import
