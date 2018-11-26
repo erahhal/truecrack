@@ -1,11 +1,11 @@
 Source: truecrack
 Section: utils
-Priority: extra
+Priority: optional
 Maintainer: Devon Kearns <dookie@kali.org>
 Build-Depends: debhelper (>= 11)
-Standards-Version: 3.9.3
+Standards-Version: 4.2.1
 Homepage: https://github.com/lvaccaro/truecrack
-Vcs-Git: ssh://git@git.kali.org/packages/truecrack.git
+Vcs-Git: git://git.kali.org/packages/truecrack.git
 Vcs-Browser: http://git.kali.org/gitweb/?p=packages/truecrack.git;a=summary
 
 Package: truecrack
