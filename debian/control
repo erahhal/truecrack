@@ -4,7 +4,7 @@ Priority: extra
 Maintainer: Devon Kearns <dookie@kali.org>
 Build-Depends: debhelper (>= 8.0.0)
 Standards-Version: 3.9.3
-Homepage: http://code.google.com/p/truecrack/
+Homepage: https://github.com/lvaccaro/truecrack
 Vcs-Git: ssh://git@git.kali.org/packages/truecrack.git
 Vcs-Browser: http://git.kali.org/gitweb/?p=packages/truecrack.git;a=summary
 

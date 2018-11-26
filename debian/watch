@@ -1,7 +1,6 @@
-version=3
-
-# This is the right string but the download archive isn't named properly
-# by the author so uscan thinks there's always an update.
-# If upstream ever starts to name them properly, we can edit this to suit.
-
+version=4
+# old repo
 # http://code.google.com/p/truecrack/downloads/list?can=1 .*/truecrack\.(?:zip|tgz|tbz2|txz|tar\.gz|tar\.bz2|tar\.xz)
+# New repo (see https://bugs.kali.org/view.php?id=5116)
+opts="filenamemangle=s/.*\/v?(.*)\.tar\.gz/truecrack-$1.tar.gz/" \
+https://github.com/lvaccaro/truecrack/tags .*/v?(.*)\.tar\.gz

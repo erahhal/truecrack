@@ -1,6 +1,6 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: truecrack
-Source: http://code.google.com/p/truecrack/
+Source: https://github.com/lvaccaro/truecrack
 
 Files: *
 Copyright: Luca Vaccaro 
