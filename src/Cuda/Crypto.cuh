@@ -169,7 +169,11 @@ typedef struct
 	BOOL Deprecated;
 	BOOL SystemEncryption;	// Available for system encryption
 } Hash;
-
+	
+#define max(x, y) (((x) > (y)) ? (x) : (y))
+	
+#define min(x, y) (((x) < (y)) ? (x) : (y))
+	
 // Maxium length of scheduled key
 #if !defined (TC_WINDOWS_BOOT) || defined (TC_WINDOWS_BOOT_AES)
 #	define AES_KS				(sizeof(aes_encrypt_ctx) + sizeof(aes_decrypt_ctx))
@@ -188,11 +192,15 @@ typedef struct
 #		define MAX_EXPANDED_KEY	TWOFISH_KS
 #	endif
 
-#else
-
-#define MAX_EXPANDED_KEY	(AES_KS + SERPENT_KS + TWOFISH_KS)
+#else	
+//************************
+//#define MAX_EXPANDED_KEY	(AES_KS + SERPENT_KS + TWOFISH_KS)
+#define MAX_EXPANDED_KEY	AES_KS+ SERPENT_KS
+//*************************
 
 #endif
+	
+	
 
 #ifdef DEBUG
 #	define PRAND_DISK_WIPE_PASSES	3
@@ -205,8 +213,7 @@ typedef struct
 #else
 #	include "AesSmall.h"
 #endif
-#include "Serpent.h"
-#include "Twofish.h"
+
 
 //#include "GfMul.h"
 #include "Password.h"
@@ -224,8 +231,8 @@ typedef struct CRYPTO_INFO_t
 {
 	int ea;									/* Encryption algorithm ID */
 	int mode;								/* Mode of operation (e.g., XTS) */
-	unsigned __int8 ks[MAX_EXPANDED_KEY];	/* Primary key schedule (if it is a cascade, it conatins multiple concatenated keys) */
-	unsigned __int8 ks2[MAX_EXPANDED_KEY];	/* Secondary key schedule (if cascade, multiple concatenated) for XTS mode. */
+	__align__(8) unsigned __int8 ks[MAX_EXPANDED_KEY];	/* Primary key schedule (if it is a cascade, it conatins multiple concatenated keys) */
+	__align__(8) unsigned __int8 ks2[MAX_EXPANDED_KEY];	/* Secondary key schedule (if cascade, multiple concatenated) for XTS mode. */
 
 	BOOL hiddenVolume;						// Indicates whether the volume is mounted/mountable as hidden volume
 
@@ -235,8 +242,7 @@ typedef struct CRYPTO_INFO_t
 	//GfCtx gf_ctx; 
 
 	//unsigned __int8 master_keydata[MASTER_KEYDATA_SIZE];	/* This holds the volume header area containing concatenated master key(s) and secondary key(s) (XTS mode). For LRW (deprecated/legacy), it contains the tweak key before the master key(s). For CBC (deprecated/legacy), it contains the IV seed before the master key(s). */
-	//unsigned __int8 k2[MASTER_KEYDATA_SIZE];				/* For XTS, this contains the secondary key (if cascade, multiple concatenated). For LRW (deprecated/legacy), it contains the tweak key. For CBC (deprecated/legacy), it contains the IV seed. */
-	unsigned __int8 km2[MASTER_KEYDATA_SIZE];				/* For XTS, this contains the secondary key (if cascade, multiple concatenated). For LRW (deprecated/legacy), it contains the tweak key. For CBC (deprecated/legacy), it contains the IV seed. */
+	__align__(8) unsigned __int8 k2[MASTER_KEYDATA_SIZE];				/* For XTS, this contains the secondary key (if cascade, multiple concatenated). For LRW (deprecated/legacy), it contains the tweak key. For CBC (deprecated/legacy), it contains the IV seed. */
 	
 	//unsigned __int8 salt[PKCS5_SALT_SIZE];
 	int noIterations;
