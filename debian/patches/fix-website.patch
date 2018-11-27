@@ -1,0 +1,26 @@
+Description: Fix website url
+Author: Sophie Brun <sophie@offensive-security.com>
+Last-Update: 2018-11-27
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/src/Main/Core.h
++++ b/src/Main/Core.h
+@@ -21,7 +21,7 @@
+ 
+ #define SOFTWARE	"TrueCrack"
+ #define VERSION		"3.6"
+-#define WEBSITE		"http://code.google.com/p/truecrack"
++#define WEBSITE		"https://github.com/lvaccaro/truecrack"
+ #define AUTHOR		"Luca Vaccaro"
+ #define EMAIL		"infotruecrack@gmail.com"
+ #define MESSAGE 	"Bruteforce password cracker for Truecrypt volume. Optimazed with Nvidia Cuda technology.\nBased on TrueCrypt, freely available at http://www.truecrypt.org/\nCopyright (c) 2011 by Luca Vaccaro."
+--- a/test/README
++++ b/test/README
+@@ -1,6 +1,6 @@
+ TRUECRACK v3.5: EXAMPLES
+ ------------------------
+-website: http://www.truecrack.net , http://code.google.com/p/truecrack
++website: http://www.truecrack.net , https://github.com/lvaccaro/truecrack
+ mail:    infotruecrack@gmail.com
+ 
+ 1. Bruteforce attacks: 
