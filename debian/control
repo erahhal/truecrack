@@ -11,10 +11,10 @@ Vcs-Browser: http://git.kali.org/gitweb/?p=packages/truecrack.git;a=summary
 Package: truecrack
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: Bruteforce password cracker for TrueCrypt volumes.
+Description: Bruteforce password cracker for TrueCrypt volumes
  TrueCrack is a bruteforce password cracker for TrueCrypt 
- (Copyrigth) volume.
- It is optimazed with Nvidia Cuda technology. It works with 
- PBKDF2 (defined in PKCS5 v2.0) based on RIPEMD160 Key 
- derivation function and XTS block cipher mode of operation 
+ (Copyright) volume.
+ It is optimazed with Nvidia Cuda technology. It works with
+ PBKDF2 (defined in PKCS5 v2.0) based on RIPEMD160 Key
+ derivation function and XTS block cipher mode of operation
  used for hard disk encryption based on AES.
