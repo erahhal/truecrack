@@ -17,3 +17,7 @@ override_dh_auto_configure:
 override_dh_auto_install:
 	dh_installdirs
 	install src/truecrack $(CURDIR)/debian/truecrack/usr/bin/
+
+override_dh_fixperms:
+	dh_fixperms
+	chmod 644 debian/truecrack/usr/share/truecrack/most_common_password_10k.txt
