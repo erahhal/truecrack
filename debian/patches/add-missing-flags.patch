@@ -16,7 +16,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 
  if DARWIN
  CFLAGS += -DTC_MACOSX
-@@ -42,7 +42,7 @@ endif
+@@ -40,7 +40,7 @@ endif
  all: truecrack
 
  truecrack:  $(OBJ_CUDA) $(OBJ_MAIN) $(OBJS_COMMON) $(OBJS_CRYPTO)
@@ -25,7 +25,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 
  $(OBJ_CUDA):
  	cat Cuda/Core.cu > Cuda.cu
-@@ -56,16 +56,16 @@ $(OBJ_CUDA):
+@@ -54,16 +54,16 @@ $(OBJ_CUDA):
  	cat Cuda/Sha2.cu >> Cuda.cu
  	cat Cuda/Whirlpool.cu >> Cuda.cu
 
