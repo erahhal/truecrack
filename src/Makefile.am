@@ -56,7 +56,7 @@ $(OBJ_CUDA):
 	cat Cuda/Sha2.cu >> Cuda.cu
 	cat Cuda/Whirlpool.cu >> Cuda.cu
 	
-	$(COMPILER) -c Cuda.cu $(CFLAGS) --opencc-options -OPT:Olimit=0 $< -o $@
+	$(COMPILER) -c Cuda.cu $(CFLAGS) --opencc-options -OPT:Olimit=99999 $< -o $@
 
 $(OBJS_COMMON): %.o: Common/%.c
 	$(COMPILER) -c $(CFLAGS) $< -o $@
