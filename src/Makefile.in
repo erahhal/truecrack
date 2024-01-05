@@ -181,8 +181,8 @@ LFLAGS = -lm -O3
 @ENABLE_CPU_TRUE@COMPILER = $(CC)
 @ENABLE_CPU_FALSE@OBJ_CUDA = Cuda.o
 # CUDA code generation flags
-@ENABLE_CPU_FALSE@GENCODE_SM50 = -gencode arch=compute_50,code=sm_50
-@ENABLE_CPU_FALSE@GENCODE_FLAGS = $(GENCODE_SM50)
+@ENABLE_CPU_FALSE@GENCODE_SM61 = -gencode arch=compute_61,code=sm_61
+@ENABLE_CPU_FALSE@GENCODE_FLAGS = $(GENCODE_SM61)
 truecrack_SOURCES = 
 truecrack_CFLAGS = $(CUDA_CFLAGS)
 truecrack_LDADD = $(CUDA_LIBS)

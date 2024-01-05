@@ -30,8 +30,8 @@ OBJ_CUDA=Cuda.o
 CFLAGS += -D_GPU_
 COMPILER=$(NVCC)
 # CUDA code generation flags
-GENCODE_SM50= -gencode arch=compute_50,code=sm_50
-GENCODE_FLAGS=  $(GENCODE_SM50)
+GENCODE_SM61= -gencode arch=compute_61,code=sm_61
+GENCODE_FLAGS=  $(GENCODE_SM61)
 CFLAGS += $(GENCODE_FLAGS) -ftz=true -use_fast_math
 endif
 
