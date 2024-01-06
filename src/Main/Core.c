@@ -30,6 +30,22 @@
 #include "CpuCore.h"
 #endif
 
+/* Externs */
+char *CORE_wordsPath;
+char *CORE_volumePath;
+unsigned char *CORE_charset;
+int CORE_maxlength;
+int CORE_minlength;
+int CORE_typeAttack;
+int CORE_blocksize;
+int CORE_verbose;
+int CORE_keyDerivationFunction;
+long int CORE_restore;
+int CORE_backup;
+int CORE_hidden;
+int CORE_encryptionAlgorithm;
+unsigned char *CORE_prefix;
+
 /* Buffer with header */
 char header[512]={0};
 int header_length;

@@ -182,7 +182,8 @@ LFLAGS = -lm -O3
 @ENABLE_CPU_FALSE@OBJ_CUDA = Cuda.o
 # CUDA code generation flags
 @ENABLE_CPU_FALSE@GENCODE_SM61 = -gencode arch=compute_61,code=sm_61
-@ENABLE_CPU_FALSE@GENCODE_FLAGS = $(GENCODE_SM61)
+@ENABLE_CPU_FALSE@GENCODE_SM86 = -gencode arch=compute_86,code=sm_86
+@ENABLE_CPU_FALSE@GENCODE_FLAGS = $(GENCODE_SM61) $(GENCODE_SM86)
 truecrack_SOURCES = 
 truecrack_CFLAGS = $(CUDA_CFLAGS)
 truecrack_LDADD = $(CUDA_LIBS)

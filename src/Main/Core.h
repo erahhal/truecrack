@@ -36,33 +36,33 @@ enum {
 };
 
 /* The name of the file of words */
-char *CORE_wordsPath;
+extern char *CORE_wordsPath;
 /* The name of the file of truecrypt volume */
-char *CORE_volumePath;
+extern char *CORE_volumePath;
 /* The charset string */
-unsigned char *CORE_charset;
+extern unsigned char *CORE_charset;
 /*The max length of words generated from charset */
-int CORE_maxlength;
+extern int CORE_maxlength;
 /*The min length of words generated from charset */
-int CORE_minlength;
+extern int CORE_minlength;
 /* The type of attack */
-int CORE_typeAttack;
+extern int CORE_typeAttack;
 /* Size of the block of parallel words*/
-int CORE_blocksize;
+extern int CORE_blocksize;
 /* Whether to display verbose messages. */
-int CORE_verbose;
+extern int CORE_verbose;
 /* Key derivation function. */
-int CORE_keyDerivationFunction;
+extern int CORE_keyDerivationFunction;
 /* Restore point */
-long int CORE_restore;
+extern long int CORE_restore;
 /* Backup header */
-int CORE_backup;
+extern int CORE_backup;
 /* Hidden volume */
-int CORE_hidden;
+extern int CORE_hidden;
 /* Encryption Algorithm */
-int CORE_encryptionAlgorithm;
+extern int CORE_encryptionAlgorithm;
 /* Prefix string */
-unsigned char *CORE_prefix;
+extern unsigned char *CORE_prefix;
 /* Main function */
 void core(void);
 
